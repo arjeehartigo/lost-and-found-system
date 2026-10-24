@@ -67,7 +67,7 @@ def signup():
         cursor = mysql.connection.cursor()
         cursor.execute(
             'INSERT INTO user (fullname, email, username, password, role) VALUES (%s, %s, %s, %s, %s)',
-            (fullname, email, username, password, role)
+            (fullname, email, username, password, 'user')
         )
         mysql.connection.commit()
         cursor.close()
