@@ -9,11 +9,11 @@ import imagehash
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
-# MySQL config
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ''
-app.config['MYSQL_DB'] = 'lostfound_db'
+app.config['MYSQL_HOST'] = 'mysql-33eb9f96-arjeehartigo246-d743.d.aivencloud.com'
+app.config['MYSQL_USER'] = 'avnadmin'
+app.config['MYSQL_PASSWORD'] = os.getenv("MYSQL_PASSWORD")
+app.config['MYSQL_DB'] = 'defaultdb'
+app.config['MYSQL_PORT'] = 22496
 
 # Uploads folder
 UPLOAD_FOLDER = 'static/uploads'
